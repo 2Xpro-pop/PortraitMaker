@@ -1,0 +1,31 @@
+<UserControl
+    x:Class="PortraitMaker2.PortraitElements.Body"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:PortraitMaker2.PortraitElements"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="Root"
+    Width="225"
+    Height="320"
+    d:DesignHeight="320"
+    d:DesignWidth="225"
+    mc:Ignorable="d">
+
+    <UserControl.Template>
+
+        <ControlTemplate TargetType="local:Body">
+            <Canvas Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                <Image
+                    Canvas.Left="{TemplateBinding X}"
+                    Canvas.Top="{TemplateBinding Y}"
+                    Width="{TemplateBinding OverrideWidth}"
+                    Height="{TemplateBinding OverrideHeight}"
+                    RenderOptions.BitmapInterpolationMode="None"
+                    Source="{TemplateBinding Image}" />
+            </Canvas>
+        </ControlTemplate>
+
+    </UserControl.Template>
+
+</UserControl>
