@@ -47,6 +47,11 @@ public sealed class Mask : Control
         set => SetValue(SecondaryColorProperty, value);
     }
 
+    public Mask()
+    {
+        RenderOptions.SetBitmapInterpolationMode(this, BitmapInterpolationMode.None);
+    }
+
     public override void Render(DrawingContext context)
     {
         var bounds = Bounds;

@@ -24,8 +24,7 @@
                     Canvas.Top="{Binding #MainImage.(Canvas.Top)}"
                     Width="{Binding #MainImage.Width}"
                     Height="{Binding #MainImage.Height}"
-                    Source="{TemplateBinding MaskSource}"
-                    ZIndex="100" />
+                    Source="{TemplateBinding MaskSource}" />
 
                 <Image
                     x:Name="MainImage"
