@@ -6,7 +6,7 @@ using Avalonia.Markup.Xaml;
 namespace PortraitMaker2;
 public partial class App : Application
 {
-    public static string AppPath => AppDomain.CurrentDomain.BaseDirectory;
+    public static string BasePath => AppDomain.CurrentDomain.BaseDirectory;
 
     public override void Initialize()
     {

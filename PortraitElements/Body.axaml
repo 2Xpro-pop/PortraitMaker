@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:PortraitMaker2.PortraitElements"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:portrait="using:PortraitMaker2"
     x:Name="Root"
     Width="225"
     Height="320"
@@ -16,13 +17,27 @@
 
         <ControlTemplate TargetType="local:Body">
             <Canvas Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+
+
+                <portrait:Mask
+                    Canvas.Left="{Binding #MainImage.(Canvas.Left)}"
+                    Canvas.Top="{Binding #MainImage.(Canvas.Top)}"
+                    Width="{Binding #MainImage.Width}"
+                    Height="{Binding #MainImage.Height}"
+                    Source="{TemplateBinding MaskSource}"
+                    ZIndex="100" />
+
                 <Image
+                    x:Name="MainImage"
                     Canvas.Left="{TemplateBinding X}"
                     Canvas.Top="{TemplateBinding Y}"
                     Width="{TemplateBinding OverrideWidth}"
                     Height="{TemplateBinding OverrideHeight}"
                     RenderOptions.BitmapInterpolationMode="None"
                     Source="{TemplateBinding Image}" />
+
+
+
             </Canvas>
         </ControlTemplate>
 

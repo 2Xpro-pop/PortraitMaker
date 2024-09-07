@@ -16,6 +16,7 @@
             <Body
                 Background="{TemplateBinding Background}"
                 Image="/Assets/body1.png"
+                MaskSource="/Assets/body1.mask.png"
                 OverrideHeight="125"
                 OverrideWidth="225"
                 RenderOptions.BitmapInterpolationMode="None"

@@ -12,13 +12,7 @@
 
     <Grid ColumnDefinitions="200, *" RowDefinitions="40, *">
 
-        <Portrait
-            Grid.Row="1"
-            Grid.Column="1"
-            Width="225"
-            Height="320"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center" />
+        <Portrait Grid.Row="1" Grid.Column="1" />
 
     </Grid>
 
